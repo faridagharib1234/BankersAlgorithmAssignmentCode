@@ -31,47 +31,30 @@ The program will output whether the system is in a safe state or not. If the sys
 
 ## Numbers used while running the code:
 
-Numbers for a safe request:
-Enter the number of processes: 3
-Enter the number of resources: 4
-Enter total resources: 6 4 7 3
-Enter current allocation for process 0: 1 0 2 1
-Enter current allocation for process 1: 0 1 3 0
-Enter current allocation for process 2: 1 2 1 1
-Enter maximum need for process 0: 4 1 3 2
-Enter maximum need for process 1: 1 3 5 1
-Enter maximum need for process 2: 3 3 3 3
-Enter process id (0-2): 1
-Enter requested resources: 0 1 1 0
-The request is safe.
+*Here are some numbers you can use to test if the program can detect an unsafe state:
+- num_processes = 3, num_resources = 3
+- available = [3, 3, 2]
+- max_demand = [[7, 5, 3], [3, 2, 2], [9, 0, 2]]
+- allocation = [[0, 1, 0], [2, 0, 0], [3, 0, 2]]
+-> This will result in an unsafe state, and the program should detect that no safe sequence exists.
 
-Numbers used for an unsafe request:
-Enter the number of processes: 5
-Enter the number of resources: 3
-Enter total resources: 10 10 10
-Enter current allocation for process 0: 0 1 0
-Enter current allocation for process 1: 3 0 2
-Enter current allocation for process 2: 3 0 2
-Enter current allocation for process 3: 2 1 1
-Enter current allocation for process 4: 0 0 2
-Enter maximum need for process 0: 7 5 3
-Enter maximum need for process 1: 5 2 5
-Enter maximum need for process 2: 9 0 2
-Enter maximum need for process 3: 2 3 3
-Enter maximum need for process 4: 4 3 3
-Enter process id (0-4): 2
-Enter requested resources: 2 0 1
-The request is unsafe
+*Here's an example input that should produce a safe state:
+- num_processes = 5, num_resources = 3
+- available = [3, 3, 2]
+- max_demand = [[7, 5, 3], [3, 2, 2], [9, 0, 2], [2, 2, 2], [4, 3, 3]]
+- allocation = [[0, 1, 0], [2, 0, 0], [3, 0, 2], [2, 1, 1], [0, 0, 2]]
+->The safe sequence for this input should be: [1, 3, 4, 0, 2]
 
 ## Screenshots while the code is running!
 
-First, while it gives me that the request is safe:
-![1](https://github.com/faridagharib1234/BankersAlgorithmAssignmentCode/assets/58792738/fbcf578f-21bb-49e8-a307-eee55472c1e6)
-![2](https://github.com/faridagharib1234/BankersAlgorithmAssignmentCode/assets/58792738/026c01c9-461c-4be5-9785-2d57b97acdd1)
+*Banker's Algorithm:
+![1](https://github.com/faridagharib1234/BankersAlgorithmAssignmentCode/assets/58792738/d4c49f46-b919-4511-89de-5d208a269a83)
 
-Second, while it gives me that the request is unsafe:
-![3](https://github.com/faridagharib1234/BankersAlgorithmAssignmentCode/assets/58792738/97318b45-9a66-4139-8b5a-8f32ec6f8171)
-![4](https://github.com/faridagharib1234/BankersAlgorithmAssignmentCode/assets/58792738/81d999af-6a4f-4eb6-9148-b50abd337eae)
+*First, while it gives me that the request is safe:
+![Safe Sequence](https://github.com/faridagharib1234/BankersAlgorithmAssignmentCode/assets/58792738/78638174-72bb-428d-bf9a-ff078b308c4c)
+
+*Second, while it gives me that the request is unsafe:
+![Not safe](https://github.com/faridagharib1234/BankersAlgorithmAssignmentCode/assets/58792738/d24e0d45-c30f-449b-8295-c3ba36aba3b5)
 
 ## Author
 
