@@ -33,7 +33,7 @@ The program will output whether the system is in a safe state or not. If the sys
 To get started with the project, simply clone the repository to your computer:
  
  ```bash
-
+https://github.com/faridagharib1234/BankersAlgorithmAssignmentCode.git
  ```
 
 ## Numbers used while running the code:
