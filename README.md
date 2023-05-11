@@ -29,6 +29,13 @@ The program will output whether the system is in a safe state or not. If the sys
 - `CodeWithGUI.py`: This is the main file of the program that runs the Banker's algorithm with a GUI in it.
 - `README.md`: This file contains information about the program and how to use it.
 
+## Installation
+To get started with the project, simply clone the repository to your computer:
+ 
+ ```bash
+
+ ```
+
 ## Numbers used while running the code:
 
 *Here are some numbers you can use to test if the program can detect an unsafe state:
